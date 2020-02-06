@@ -1,6 +1,7 @@
 $(window).on('load', function() {
-  if ($('#nivo-slider').length > 0) {
-    $('#nivo-slider').nivoSlider({
+  if ($('#slider').length > 0) {
+    $('#slider').nivoSlider({
+      directionNav:true,
       controlNav: true
     });
   }
