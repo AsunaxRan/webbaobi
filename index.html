@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Tralico</title>
+  <title>Công ty bao bì Trang Linh</title>
   <link rel="stylesheet" href="vendors/fontawesome-free-5.12.1-web/css/all.min.css">
   <link rel="stylesheet" href="vendors/nivo-slider/themes/default/default.css">
   <link rel="stylesheet" href="vendors/nivo-slider/nivo-slider.css">
@@ -26,6 +26,9 @@
         </div>
       </div>
       <nav class="nav">
+        <button class="nav__close">
+          <i class="fas fa-long-arrow-alt-left"></i>
+        </button>
         <div class="nav__container container">
           <div class="nav__item">
             <a href="index.html" class="nav__link">TRANG CHỦ</a>
@@ -34,16 +37,19 @@
             <a href="about.html" class="nav__link">GIỚI THIỆU</a>
           </div>
           <div class="nav__item dropdown">
-            <a href="#" class="nav__link dropdown-toggle">SẢN PHẨM</a>
-            <div class="dropdown-menu">
-              <div href="#" class="dropdown-item sub-menu">
-                BAO JUMBO, CONTAINER, BIGBAG
-                <!-- <div class="dropdown-submenu">
-                  <a href="#" class="dropdown-item">Bao Jumbo Đựng Khoáng Sản</a>
-                  <a href="#" class="dropdown-item">Bao Jumbo Đựng Khoáng Sản</a>
-                </div> -->
+            <a href="#" class="nav__link dropdown__toggle">SẢN PHẨM</a>
+            <div class="dropdown__menu">
+              <div href="#" class="dropdown__item">
+                <div class="dropdown__sub-menu">
+                  BAO JUMBO, CONTAINER, BIGBAG
+                  <i class="fas fa-caret-right dropdown__icon"></i>
+                </div>
+                <div class="dropdown__sub-content">
+                  <a href="#" class="nav__link dropdown-item">Bao Jumbo Đựng Khoáng Sản</a>
+                  <a href="#" class="nav__link dropdown-item">Bao Jumbo Đựng Khoáng Sản</a>
+                </div>
               </div>
-              <div href="#" class="dropdown-item sub-menu">
+              <div href="#" class="dropdown__item">
                 DÂY THỪNG CHO NGÀNH BAO CẨU JUMBO BIGBAG
               </div>
             </div>
@@ -177,8 +183,11 @@
             </section>
           </aside>
           <div id="content" class="col-md-8 col-lg-9">
+            <div class="toolbox">
+              <div class="addthis_inline_share_toolbox"></div>
+            </div>
             <section class="group">
-              <h2 class="group__title h5">BAO JUMBO, CONTAINER, BIGBAG</h2>
+              <h2 class="group__title h5 has-toolbox">BAO JUMBO, CONTAINER, BIGBAG</h2>
               <div class="group__actions"></div>
               <div class="group__content row">
                 <div class="col-6 col-md-4">
@@ -283,7 +292,7 @@
                   <div class="product">
                     <div class="product__placeholder">
                       <a class="product__link" href="#" title="Dây thừng cho ngành bao cẩu Jumbo Bigbag 1">
-                        <img src="imgs/products/sample.png" alt="Dây thừng cho ngành bao cẩu Jumbo Bigbag 1" class="product__image">
+                        <img src="imgs/products/type2-product-1.jpg" alt="Dây thừng cho ngành bao cẩu Jumbo Bigbag 1" class="product__image">
                       </a>
                     </div>
                     <p class="product__name">Dây thừng cho ngành bao cẩu Jumbo Bigbag 1</p>
@@ -293,7 +302,7 @@
                   <div class="product">
                     <div class="product__placeholder">
                       <a class="product__link" href="#" title="Dây thừng cho ngành bao cẩu Jumbo Bigbag 2">
-                        <img src="imgs/products/sample.png" alt="Dây thừng cho ngành bao cẩu Jumbo Bigbag 2" class="product__image">
+                        <img src="imgs/products/type2-product-2.jpg" alt="Dây thừng cho ngành bao cẩu Jumbo Bigbag 2" class="product__image">
                       </a>
                     </div>
                     <p class="product__name">Dây thừng cho ngành bao cẩu Jumbo Bigbag 2</p>
@@ -303,7 +312,7 @@
                   <div class="product">
                     <div class="product__placeholder">
                       <a class="product__link" href="#" title="Dây thừng cho ngành bao cẩu Jumbo Bigbag 3">
-                        <img src="imgs/products/sample.png" alt="Dây thừng cho ngành bao cẩu Jumbo Bigbag 3" class="product__image">
+                        <img src="imgs/products/type2-product-3.jpg" alt="Dây thừng cho ngành bao cẩu Jumbo Bigbag 3" class="product__image">
                       </a>
                     </div>
                     <p class="product__name">Dây thừng cho ngành bao cẩu Jumbo Bigbag 3</p>
@@ -330,8 +339,26 @@
   </div>
 
   <script src="js/vendors/jquery-3.4.1.min.js"></script>
-  <script src="vendors/bootstrap-4.4.1/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="vendors/bootstrap-4.4.1/js/bootstrap.bundle.min.js"></script> -->
   <script src="vendors/nivo-slider/jquery.nivo.slider.js"></script>
   <script src="js/main.js"></script>
+  <!-- Subiz -->
+  <script>
+    (function (s, u, b, i, z) {
+      u[i] = u[i] || function () {
+        u[i].t = +new Date();
+        (u[i].q = u[i].q || []).push(arguments);
+      };
+      z = s.createElement('script');
+      var zz = s.getElementsByTagName('script')[0];
+      z.async = 1;
+      z.src = b;
+      z.id = 'subiz-script';
+      zz.parentNode.insertBefore(z, zz);
+    })(document, window, 'https://widgetv4.subiz.com/static/js/app.js', 'subiz');
+    subiz('setAccount', 'acqotzhphbcmfeakwejj');
+  </script>
+  <!-- End Subiz -->
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e3d25491d83d70d"></script>
 </body>
 </html>

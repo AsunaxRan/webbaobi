@@ -61,6 +61,13 @@
     padding-bottom: 10px;
   }
 
+  &__title.has-toolbox {
+    padding-right: 110px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
   &__content {
     padding-top: 10px;
   }
@@ -136,7 +143,21 @@
 
 // nav
 .nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 290px;
+  height: 100vh;
+  z-index: 10;
+  overflow-y: auto;
   background-color: $blue;
+
+  &__close {
+    position: absolute;
+    top: 0;
+    left: 330px;
+  }
 
   &__container {
     padding-left: 0;
@@ -160,23 +181,47 @@
   }
 
   @include media-breakpoint-up(md) {
-    &__item {
-      display: inline-block;
-    }
+    // &__item {
+    //   display: inline-block;
+    // }
+
+    // &__link {
+    //   &:hover {
+    //     text-decoration: none;
+    //     color: $blue;
+    //     background-color: $white;
+    //   }
+    // }
   }
 }
 
 // dropdown
-.dropdown-menu {}
+.dropdown {
+  &__menu {
+    display: block;
+  }
 
-.dropdown-item {
-  cursor: pointer;
-}
+  &__item {
+    cursor: pointer;
+    display: block;
+    padding: 10px 15px;
+    color: $white;
+    background-color: indigo;
+    position: relative;
+  }
 
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
+  &__sub-menu {
+    display: flex;
+  }
 
-@include media-breakpoint-up(md) {
+  &__sub-content {
+    background-color: orange;
+  }
 
+  &__icon {
+    font-size: 1.5em;
+    // transform: rotate(90deg);
+  }
+
+  @include media-breakpoint-up(md) {}
 }
