@@ -1,3 +1,21 @@
+// highlight
+.highlight {
+  background: linear-gradient(45deg, $yellow, transparent);
+  padding: 10px 120px 10px 10px;
+  position: relative;
+
+  &__symbol {
+    display: inline-block;
+    width: 150px;
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+  }
+
+  @include media-breakpoint-up(lg) {
+  }
+}
+
 // product
 .product {
   &__placeholder {
@@ -24,8 +42,14 @@
   }
 
   &__name {
-    margin-top: .25rem;
+    padding: 4px 10px;
   }
+}
+
+// avatar
+.avatar {
+  width: 100px;
+  border-color: $gray-500;
 }
 
 // group
@@ -40,4 +64,119 @@
   &__content {
     padding-top: 10px;
   }
+}
+
+// search
+.search {
+  padding: 30px 0 15px 0;
+
+  &__group {
+    position: relative;
+  }
+
+  &__input {
+    width: 100%;
+    height: 40px;
+    padding-left: 4px;
+    padding-right: 46px;
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+
+  &__action {
+    position: absolute;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    width: 46px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+// list
+.list {
+  &__title {
+    background-color: $yellow;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  &__item:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f0da";
+    font-weight: 900;
+  }
+
+  &__item:not(:last-child) {
+    border-bottom: 1px solid $gray-400;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  &__anchor {
+    color: $black;
+
+    i {
+      color: $gray-600;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+// nav
+.nav {
+  background-color: $blue;
+
+  &__container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__item {
+    display: block;
+  }
+
+  &__link {
+    display: block;
+    padding: 10px 15px;
+    color: $white;
+
+    &:hover {
+      text-decoration: none;
+      color: $blue;
+      background-color: $white;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    &__item {
+      display: inline-block;
+    }
+  }
+}
+
+// dropdown
+.dropdown-menu {}
+
+.dropdown-item {
+  cursor: pointer;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+@include media-breakpoint-up(md) {
+
 }
