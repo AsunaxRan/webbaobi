@@ -6,3 +6,19 @@ $(window).on('load', function() {
     });
   }
 });
+
+$('.nav__close').on('click', function() {
+  $('.nav').removeClass('open');
+});
+
+$('.nav-collapse').on('click', function() {
+  $('.nav').addClass('open');
+});
+
+$('.dropdown__toggle').on('click', function() {
+  $(this).next().slideToggle();
+});
+
+$('.sub-menu__toggle').on('click', function() {
+  $(this).next().slideToggle();
+});

@@ -143,85 +143,125 @@
 
 // nav
 .nav {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
-  width: 290px;
+  width: 320px;
   height: 100vh;
   z-index: 10;
-  overflow-y: auto;
-  background-color: $blue;
+  background-color: $white;
+  text-transform: uppercase;
+  left: -320px;
+  transition: .3s ease;
 
-  &__close {
-    position: absolute;
-    top: 0;
-    left: 330px;
+  &.open {
+    left: 0;
+    box-shadow: 2px 2px 5px 0 rgba($black,.4);
   }
 
   &__container {
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
     padding-left: 0;
     padding-right: 0;
   }
 
-  &__item {
-    display: block;
-  }
-
-  &__link {
-    display: block;
-    padding: 10px 15px;
-    color: $white;
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    font-size: 1.5em;
+    opacity: .8;
 
     &:hover {
-      text-decoration: none;
-      color: $blue;
-      background-color: $white;
+      opacity: 1;
+    }
+
+    &:focus {
+      outline: none;
     }
   }
 
-  @include media-breakpoint-up(md) {
-    // &__item {
-    //   display: inline-block;
-    // }
+  &__item {
+    display: block;
+  }
+  
+  &__link {
+    display: block;
+    padding: 5px 10px;
+  }
 
-    // &__link {
-    //   &:hover {
-    //     text-decoration: none;
-    //     color: $blue;
-    //     background-color: $white;
-    //   }
-    // }
+  @include media-breakpoint-up(md) {
+    position: static;
+    width: auto;
+    height: auto;
+    box-shadow: none;
+
+    &.open {
+      box-shadow: none;
+    }
+
+    &__container {
+      overflow-y: visible;
+    }
+
+    &__item {
+      display: inline-block;
+    }
+
+    &__link {
+      display: inline-block;
+      padding: 10px 15px;
+    }
   }
 }
 
-// dropdown
 .dropdown {
+  position: relative;
+
   &__menu {
-    display: block;
+    display: none;
+  }
+  
+  @include media-breakpoint-up(md) {
+    &__menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 240px;
+    }
+
+    &:hover &__menu {
+      display: block;
+    }
+  }
+}
+
+.sub-menu {
+  &__toggle {
+    cursor: pointer;
+    padding: 5px 10px 5px 25px;
+  }
+
+  &__list {
+    display: none;
   }
 
   &__item {
-    cursor: pointer;
     display: block;
-    padding: 10px 15px;
-    color: $white;
-    background-color: indigo;
-    position: relative;
+    padding: 5px 10px 5px 45px;
   }
 
-  &__sub-menu {
-    display: flex;
+  @include media-breakpoint-up(md) {
+    &:hover &__list {
+      display: block;
+    }
   }
-
-  &__sub-content {
-    background-color: orange;
-  }
-
-  &__icon {
-    font-size: 1.5em;
-    // transform: rotate(90deg);
-  }
-
-  @include media-breakpoint-up(md) {}
 }
