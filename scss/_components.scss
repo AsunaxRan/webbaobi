@@ -203,6 +203,7 @@
     width: auto;
     height: auto;
     box-shadow: none;
+    background-color: $blue-8;
 
     &.open {
       box-shadow: none;
@@ -219,15 +220,26 @@
     &__link {
       display: inline-block;
       padding: 10px 15px;
+      color: $black;
     }
   }
 }
 
 .dropdown {
   position: relative;
+  z-index: 10;
 
   &__menu {
     display: none;
+  }
+
+  &__item {
+    display: block;
+    padding: 10px 15px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $gray-200;
+    }
   }
   
   @include media-breakpoint-up(md) {
@@ -235,32 +247,12 @@
       position: absolute;
       top: 100%;
       left: 0;
-      width: 240px;
+      width: 280px;
+      background-color: $gray-400;
+      box-shadow: 0 0 5px 0 rgba($black,.4);
     }
 
     &:hover &__menu {
-      display: block;
-    }
-  }
-}
-
-.sub-menu {
-  &__toggle {
-    cursor: pointer;
-    padding: 5px 10px 5px 25px;
-  }
-
-  &__list {
-    display: none;
-  }
-
-  &__item {
-    display: block;
-    padding: 5px 10px 5px 45px;
-  }
-
-  @include media-breakpoint-up(md) {
-    &:hover &__list {
       display: block;
     }
   }
