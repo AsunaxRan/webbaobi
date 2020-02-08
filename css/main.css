@@ -10116,6 +10116,12 @@ h3 {
   }
 }
 
+.logo {
+  font-size: 36px;
+  color: darkblue;
+  font-weight: 600;
+}
+
 .wrapper {
   position: relative;
   overflow-x: hidden;
