@@ -130,7 +130,7 @@
   }
 
   &__anchor {
-    color: $black;
+    color: $gray-900;
 
     i {
       color: $gray-600;
@@ -197,6 +197,7 @@
   &__link {
     display: block;
     padding: 5px 10px;
+    color: $black;
   }
 
   @include media-breakpoint-up(md) {
@@ -221,7 +222,6 @@
     &__link {
       display: inline-block;
       padding: 10px 15px;
-      color: $black;
     }
   }
 }
@@ -237,6 +237,7 @@
   &__item {
     display: block;
     padding: 10px 15px;
+    color: $black;
 
     &:not(:last-child) {
       border-bottom: 1px solid $gray-300;
@@ -250,11 +251,17 @@
       left: 0;
       width: 280px;
       background-color: $white;
-      box-shadow: 0 0 5px 0 rgba($black,.4);
+      box-shadow: rgba($black, .4) 0 2px 5px 0;
     }
 
     &:hover &__menu {
       display: block;
+    }
+
+    &__item {
+      &:hover {
+        background-color: $gray-200;
+      }
     }
   }
 }

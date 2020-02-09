@@ -70,7 +70,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Fira Sans", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -5520,7 +5520,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Fira Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -5622,7 +5622,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Fira Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -10007,7 +10007,7 @@ h3 {
   padding-bottom: 5px;
 }
 .list__anchor {
-  color: #000;
+  color: #212529;
 }
 .list__anchor i {
   color: #6c757d;
@@ -10064,6 +10064,7 @@ h3 {
 .nav__link {
   display: block;
   padding: 5px 10px;
+  color: #000;
 }
 @media (min-width: 768px) {
   .nav {
@@ -10085,7 +10086,6 @@ h3 {
   .nav__link {
     display: inline-block;
     padding: 10px 15px;
-    color: #000;
   }
 }
 
@@ -10099,6 +10099,7 @@ h3 {
 .dropdown__item {
   display: block;
   padding: 10px 15px;
+  color: #000;
 }
 .dropdown__item:not(:last-child) {
   border-bottom: 1px solid #dee2e6;
@@ -10110,10 +10111,13 @@ h3 {
     left: 0;
     width: 280px;
     background-color: #fff;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: rgba(0, 0, 0, 0.4) 0 2px 5px 0;
   }
   .dropdown:hover .dropdown__menu {
     display: block;
+  }
+  .dropdown__item:hover {
+    background-color: #e9ecef;
   }
 }
 
@@ -10151,6 +10155,7 @@ h3 {
 
 .site-bg {
   background-color: #fff;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
 }
 
 .wrapper {

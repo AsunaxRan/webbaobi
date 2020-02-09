@@ -1,9 +1,11 @@
+$font-primary: 'Fira Sans', sans-serif;
 $font-icon: 'Font Awesome 5 Free';
 $black-111: #111;
 $blue-8: #87CEEB;
 
 // Custom bootstrap variables
 // $body-bg: $site-bg;
+$font-family-base: $font-primary;
 $container-max-widths: (
   sm: 540px,
   md: 720px,
