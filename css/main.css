@@ -9990,21 +9990,18 @@ h3 {
   outline: none;
 }
 
-.list__title {
-  background-color: #ffc107;
-  padding: 5px 10px;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
 .list__item:before {
   font-family: "Font Awesome 5 Free";
   content: "";
   font-weight: 900;
 }
-.list__item:not(:last-child) {
+.list__item {
   border-bottom: 1px solid #ced4da;
   padding-top: 5px;
   padding-bottom: 5px;
+}
+.list__item:last-child {
+  border-bottom: none;
 }
 .list__anchor {
   color: #212529;
@@ -10146,11 +10143,11 @@ h3 {
   display: inline-block;
   min-width: 110px;
   color: #343a40;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .font-weight-md {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .site-bg {

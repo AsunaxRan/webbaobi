@@ -110,23 +110,20 @@
 
 // list
 .list {
-  &__title {
-    background-color: $yellow;
-    padding: 5px 10px;
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-
   &__item:before {
     font-family: "Font Awesome 5 Free";
     content: "\f0da";
     font-weight: 900;
   }
 
-  &__item:not(:last-child) {
+  &__item {
     border-bottom: 1px solid $gray-400;
     padding-top: 5px;
     padding-bottom: 5px;
+  }
+
+  &__item:last-child {
+    border-bottom: none;
   }
 
   &__anchor {
@@ -291,6 +288,6 @@
     display: inline-block;
     min-width: 110px;
     color: $gray-800;
-    font-weight: 600;
+    font-weight: 500;
   }
 }
