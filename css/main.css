@@ -10149,6 +10149,10 @@ h3 {
   font-weight: 600;
 }
 
+.site-bg {
+  background-color: #fff;
+}
+
 .wrapper {
   position: relative;
   overflow-x: hidden;
@@ -10163,7 +10167,12 @@ h3 {
 }
 
 #main {
-  background-color: #fff;
+  background-color: #e9ecef;
+  background-image: url("../imgs/site-bg.png");
+  background-position: left top;
+  background-size: auto;
+  background-repeat: repeat;
+  background-attachment: scroll;
 }
 
 #footer {
@@ -10191,6 +10200,11 @@ h3 {
 .toolbox {
   float: right;
   transform: translateY(35px);
+}
+
+.services {
+  position: relative;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
 }
 
 /*# sourceMappingURL=main.css.map */

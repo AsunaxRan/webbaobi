@@ -12,7 +12,12 @@
 }
 
 #main {
-  background-color: $white;
+  background-color: $gray-200;
+  background-image: url('../imgs/site-bg.png');
+  background-position: left top;
+  background-size: auto;
+  background-repeat: repeat;
+  background-attachment: scroll;
 }
 
 #footer {
@@ -40,4 +45,9 @@
 .toolbox {
   float: right;
   transform: translateY(35px);
+}
+
+.services {
+  position: relative;
+  box-shadow: 0 2px 5px 0 rgba($black ,.4);
 }
