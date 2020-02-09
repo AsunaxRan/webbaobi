@@ -9940,6 +9940,7 @@ h3 {
 }
 
 .avatar {
+  display: inline-block;
   width: 100px;
   border-color: #adb5bd;
 }
@@ -10119,6 +10120,32 @@ h3 {
 .logo {
   font-size: 36px;
   color: darkblue;
+  font-weight: 600;
+}
+
+.map-api {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.map-api iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.info__title {
+  display: inline-block;
+  min-width: 110px;
+  color: #343a40;
+  font-weight: 600;
+}
+
+.font-weight-md {
   font-weight: 600;
 }
 

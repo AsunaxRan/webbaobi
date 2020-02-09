@@ -48,6 +48,7 @@
 
 // avatar
 .avatar {
+  display: inline-block;
   width: 100px;
   border-color: $gray-500;
 }
@@ -262,4 +263,27 @@
   font-size: 36px;
   color: darkblue;
   font-weight: 600;
+}
+
+.map-api {
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+}
+.map-api iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
+
+.info {
+  &__title {
+    display: inline-block;
+    min-width: 110px;
+    color: $gray-800;
+    font-weight: 600;
+  }
 }
