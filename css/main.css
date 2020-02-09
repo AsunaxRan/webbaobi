@@ -10100,7 +10100,7 @@ h3 {
   padding: 10px 15px;
 }
 .dropdown__item:not(:last-child) {
-  border-bottom: 1px solid #e9ecef;
+  border-bottom: 1px solid #dee2e6;
 }
 @media (min-width: 768px) {
   .dropdown__menu {
@@ -10108,7 +10108,7 @@ h3 {
     top: 100%;
     left: 0;
     width: 280px;
-    background-color: #ced4da;
+    background-color: #fff;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
   }
   .dropdown:hover .dropdown__menu {
