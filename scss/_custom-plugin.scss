@@ -3,10 +3,6 @@
   position: relative;
 }
 
-.theme-default .nivoSlider {
-  // box-shadow: none;
-}
-
 .theme-default .nivo-controlNav {
   position: absolute;
   bottom: 0;
@@ -14,4 +10,12 @@
   transform: translateX(-50%);
   z-index: 6;
   padding: 0;
+}
+
+// easyZoom
+.easyzoom {
+  width: 100%;
+  border: 1px solid $gray-300;
+  padding: 10px;
+  text-align: center;
 }
